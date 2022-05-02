@@ -18,7 +18,7 @@ function menu_user(){
 }
 
 function menu_contact(){
-    console.log('========= User Menu =========')
+    console.log('========= Contact Menu =========')
     console.log('select 0 to exit')
     console.log('select 1 to add new contact')
     console.log('select 1 to view contact list')

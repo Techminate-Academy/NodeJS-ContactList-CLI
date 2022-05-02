@@ -9,7 +9,7 @@ let program_end = false
 let login_session = false
 
 while(!program_end){
-    instruction.welcome_menu()
+    instruction.menu_welcome()
     //user input choice
     var choice = prompt("enter you choice :");
 
@@ -34,16 +34,22 @@ while(!program_end){
 }
 
 while(!login_session){
-    instruction.main_menu()
+    instruction.menu_main()
 
     var choice = prompt("enter you choice :");
 
     switch(choice) {
         case '0':
             console.log('exit')
+            login_session = true
             break;
         case '1':
-            console.log('continue')
+            console.log('View User Menu')
+            instruction.menu_user()
+            break;
+        case '2':
+            console.log('View Contact Menu')
+            instruction.menu_contact()
             break;
         default:
           console.log('exit')
