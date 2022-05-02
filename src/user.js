@@ -22,14 +22,6 @@ class User {
         }
     }
 
-    user_update(){
-        //
-    }
-
-    user_delete(){
-        //
-    }
-
     login(email, password){
         for (let i = 0; i < this.userList.length; i++) {
             if(this.userList[i].email == email && this.userList[i].password == password){
