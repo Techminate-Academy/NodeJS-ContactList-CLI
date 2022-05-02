@@ -5,18 +5,18 @@ const user = require('./src/user.js');
 const instruction = require('./src/instruction.js');
 
 let admin = new user()
-let program_end = false
-let login_session = false
+let menu_welcome = true
+let menu_main = true
 
-while(!program_end){
+while(menu_welcome){
     instruction.menu_welcome()
     //user input choice
     var choice = prompt("enter you choice :");
 
     switch(choice) {
         case '0':
-            login_session = true
-            program_end = true
+            menu_main = false
+            menu_welcome = false
             break;
         case '1':
             var email = prompt("enter email :");
@@ -24,35 +24,28 @@ while(!program_end){
 
             let result = admin.login(email, password)
             if(result){
-                program_end = true
+                choice_menu_main()
+                menu_welcome = false
             }      
             break;
         default:
-            login_session = true
-            program_end = true
+            menu_main = false
+            menu_welcome = false
     }
 }
 
-while(!login_session){
+function choice_menu_main(){
     instruction.menu_main()
-
-    var choice = prompt("enter you choice :");
-
-    switch(choice) {
-        case '0':
-            console.log('exit')
-            login_session = true
-            break;
-        case '1':
-            console.log('View User Menu')
-            instruction.menu_user()
-            break;
-        case '2':
-            console.log('View Contact Menu')
-            instruction.menu_contact()
-            break;
-        default:
-          console.log('exit')
-    }
 }
+
+function choice_menu_user(){
+    instruction.menu_user()
+}
+
+function choice_menu_contact(){
+    instruction.menu_user()
+}
+
+
+
 

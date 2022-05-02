@@ -8,13 +8,14 @@ function menu_main(){
     console.log('========= You are logged in =========')
     console.log('select 0 to exit')
     console.log('select 1 to view user menu')
-    console.log('select 1 to view contact menu')
+    console.log('select 2 to view contact menu')
 }
 
 function menu_user(){
     console.log('========= User Menu =========')
     console.log('select 0 to exit')
     console.log('select 1 to user create')
+    console.log('select 1 to view user list')
 }
 
 function menu_contact(){
