@@ -1,0 +1,60 @@
+register (username, email, password, confimation_password)
+login(email, password)
+logout
+
+hospital management system
+User
+    Admin
+    (Cashier
+    recieptionist)
+
+base_class
+    name
+    age
+    phone
+    address
+    
+    walk(){
+        if(){
+            return 'can walk'
+        }elseif(){
+            return 'can walk fast'
+        }else{
+            return 'can walk faster'
+        }
+    }
+    talk()
+
+Nurse take props from base_class
+   base_class.walk()
+    
+Staff take props from base_class
+   base_class.walk()
+
+patient take props from base_class (create, view, edit, delete)
+
+    create()
+        name = mr Ali
+        age = 21
+        phone = 01680800810
+        address = uttara dhaka
+
+    base_class.walk()
+
+Doctor take props from base_class (create, view, edit, delete)
+
+    create()
+        name = nusrat fateh ali khan
+        age = 35
+        phone = 01695622236
+        address = dhanmondi dhaka
+
+        specialist = eye
+        working_hour = 3
+        experience = 5
+
+    base_class.walk()
+
+    operation ()
+
+

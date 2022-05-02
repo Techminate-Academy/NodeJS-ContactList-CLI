@@ -1,0 +1,16 @@
+{
+  "name": "CLI",
+  "version": "1.0.0",
+  "description": "simple management app",
+  "main": "src/main.js",
+
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "techminate-labs",
+  "license": "MIT",
+
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
