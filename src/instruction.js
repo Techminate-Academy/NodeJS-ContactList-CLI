@@ -15,16 +15,16 @@ function menu_user(){
     console.log('========= User Menu =========')
     console.log('select 0 to exit')
     console.log('select 1 to user create')
-    console.log('select 1 to view user list')
+    console.log('select 2 to view user list')
 }
 
 function menu_contact(){
     console.log('========= Contact Menu =========')
     console.log('select 0 to exit')
     console.log('select 1 to add new contact')
-    console.log('select 1 to view contact list')
-    console.log('select 1 to update a contac')
-    console.log('select 1 to delete a contact')
+    console.log('select 2 to view contact list')
+    console.log('select 3 to update a contac')
+    console.log('select 4 to delete a contact')
 }
 
 module.exports = {
