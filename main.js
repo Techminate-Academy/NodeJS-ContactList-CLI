@@ -25,7 +25,6 @@ while(menu_welcome){
             let result = admin.login(email, password)
             if(result){
                 choice_menu_main()
-                menu_welcome = false
             }      
             break;
         default:
@@ -35,7 +34,24 @@ while(menu_welcome){
 }
 
 function choice_menu_main(){
-    instruction.menu_main()
+    while(menu_main){
+        instruction.menu_main()
+        var choice = prompt("enter you choice :");
+    
+        switch(choice) {
+            case '0':
+                menu_main = false
+                break;
+            case '1':
+                choice_menu_user()
+                break;
+            case '2':
+                choice_menu_contact()
+                break;
+            default:
+                menu_main = false
+        }
+    }
 }
 
 function choice_menu_user(){
@@ -43,7 +59,7 @@ function choice_menu_user(){
 }
 
 function choice_menu_contact(){
-    instruction.menu_user()
+    instruction.menu_contact()
 }
 
 
