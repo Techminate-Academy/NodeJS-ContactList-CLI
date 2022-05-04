@@ -1,8 +1,11 @@
+const prompt = require('prompt-sync')({sigint: true});
+
 class Contact {
     contact = []
 
     create(name, phone, address){
         let info = {
+            'id' : this.contact.length + 1,
             'name' : name,
             'phone' : phone,
             'address' : address
@@ -23,4 +26,20 @@ class Contact {
    
 }
 
-module.exports = Contact;
+let contact = new Contact
+function contact_create(){
+    var name = prompt("enter your name :");
+    var phone = prompt("enter your phone :");
+    var address = prompt("enter your address :");
+
+    contact.create(name, phone, address)
+}
+
+function contact_view(){
+  contact.view()
+}
+
+module.exports = {
+    contact_create,
+    contact_view
+}

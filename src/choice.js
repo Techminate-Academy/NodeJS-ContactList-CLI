@@ -1,5 +1,6 @@
 const prompt = require('prompt-sync')({sigint: true});
-const instruction = require('./instruction.js');
+const menu = require('./menu.js');
+const contact = require('./contact.js');
 
 let menu_welcome = true
 let menu_main = true
@@ -7,7 +8,7 @@ let menu_contact = true
 
 function choice_menu_welcome(admin){
     while(menu_welcome){
-        instruction.menu_welcome()
+        menu.menu_welcome()
         var choice = prompt("enter you choice :");
 
         switch(choice) {
@@ -21,7 +22,7 @@ function choice_menu_welcome(admin){
 
                 let result = admin.login(email, password)
                 if(result){
-                    choices.choice_menu_main()
+                    choice_menu_main()
                 }      
                 break;
             default:
@@ -32,7 +33,7 @@ function choice_menu_welcome(admin){
 }
 function choice_menu_main(){
     while(menu_main){
-        instruction.menu_main()
+        menu.menu_main()
         var choice = prompt("enter you choice :");
     
         switch(choice) {
@@ -54,23 +55,23 @@ function choice_menu_main(){
 }
 
 function choice_menu_user(){
-    instruction.menu_user()
+    menu.menu_user()
 }
 
 function choice_menu_contact(){
     while(menu_contact){
-        instruction.menu_contact()
-        var choice = prompt("enter you choice :");
+        menu.menu_contact()
+        var choice = prompt("enter your choice :");
     
         switch(choice) {
             case '0':
                 menu_main = false
                 break;
             case '1':
-                console.log('add contact')
+                contact.contact_create()
                 break;
             case '2':
-                console.log('view contact')
+                contact.contact_view()
                 break;
             case '3':
                 console.log('update contact')
