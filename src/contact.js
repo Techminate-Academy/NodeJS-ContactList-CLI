@@ -21,12 +21,8 @@ class Contact {
     }
 
     get_by_id(id){
-        for (let i = 0; i < this.contact.length; i++) {
-            if(this.contact[i].id == id){
-                console.log(this.contact[i])
-                break
-            }
-        }
+        let info = this.contact.find(cont => cont.id == id)
+        console.log(info)
     }
 
     update(id, name, phone, address){
@@ -43,6 +39,15 @@ class Contact {
                 }
 
                 break;
+            }
+        }
+    }
+
+    delete(id){
+        for (let i = 0; i < this.contact.length; i++) {
+            if(this.contact[i].id == id){
+                this.contact.splice(this.contact[i]+1, 1)
+                break
             }
         }
     }
@@ -76,8 +81,15 @@ function contact_update(){
     contact.update(id, name, phone, address)
 }
 
+function contact_delete(){
+    var id = prompt("enter the id :");
+    contact.get_by_id(id)
+    contact.delete(id)
+}
+
 module.exports = {
     contact_create,
     contact_view,
-    contact_update
+    contact_update,
+    contact_delete
 }

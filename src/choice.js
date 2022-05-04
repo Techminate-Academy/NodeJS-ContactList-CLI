@@ -77,7 +77,7 @@ function choice_menu_contact(){
                 contact.contact_update()
                 break;
             case '4':
-                console.log('delete contact')
+                contact.contact_delete()
                 break;
             default:
                 menu_main = false
