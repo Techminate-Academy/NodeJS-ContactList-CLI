@@ -46,7 +46,8 @@ class Contact {
     delete(id){
         for (let i = 0; i < this.contact.length; i++) {
             if(this.contact[i].id == id){
-                this.contact.splice(this.contact[i]+1, 1)
+                // delete this.contact[i]
+                this.contact.splice(3, 1)
                 break
             }
         }
@@ -60,11 +61,14 @@ class Contact {
 
 let contact = new Contact
 function contact_create(){
-    var name = prompt("enter your name :");
-    var phone = prompt("enter your phone :");
-    var address = prompt("enter your address :");
+    // var name = prompt("enter your name :");
+    // var phone = prompt("enter your phone :");
+    // var address = prompt("enter your address :");
 
-    contact.create(name, phone, address)
+
+    contact.create('sazid', '01212', 'uttara')
+    contact.create('ahmed', '00000', 'uttara')
+    contact.create('sadia', '22222', 'uttara')
 }
 
 function contact_view(){
@@ -83,7 +87,7 @@ function contact_update(){
 
 function contact_delete(){
     var id = prompt("enter the id :");
-    contact.get_by_id(id)
+    // contact.get_by_id(id)
     contact.delete(id)
 }
 
