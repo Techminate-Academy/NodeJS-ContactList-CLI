@@ -74,7 +74,7 @@ function choice_menu_contact(){
                 contact.contact_view()
                 break;
             case '3':
-                console.log('update contact')
+                contact.contact_update()
                 break;
             case '4':
                 console.log('delete contact')
