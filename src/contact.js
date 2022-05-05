@@ -44,19 +44,13 @@ class Contact {
     }
 
     delete(id){
-        for (let i = 0; i < this.contact.length; i++) {
-            if(this.contact[i].id === id){
-                // delete this.contact[i]
-                // this.contact.splice(this.contact[i], 1)
-                // break
-                // console.log(this.contact[i])
-                this.contact.shift(this.contact[i])
-            }
-        }
+        var index = this.contact.findIndex(function(o){
+            return o.id === id;
+        })
 
-        // this.contact = this.contact.filter(data => {
-        //     return data.id !== id
-        // })
+        if (index !== -1) {
+            this.contact.splice(index, 1);
+        }
     }
 
     last_inserted_contact(){
@@ -67,14 +61,11 @@ class Contact {
 
 let contact = new Contact
 function contact_create(){
-    // var name = prompt("enter your name :");
-    // var phone = prompt("enter your phone :");
-    // var address = prompt("enter your address :");
+    var name = prompt("enter your name :");
+    var phone = prompt("enter your phone :");
+    var address = prompt("enter your address :");
 
-
-    contact.create('sazid', '01212', 'uttara')
-    contact.create('ahmed', '00000', 'uttara')
-    contact.create('sadia', '22222', 'uttara')
+    contact.create(name, phone, address)
 }
 
 function contact_view(){
@@ -94,7 +85,6 @@ function contact_update(){
 function contact_delete(){
     var id = prompt("enter the id :");
     let con_id = Number(id)
-    // contact.get_by_id(id)
     contact.delete(con_id)
 }
 
