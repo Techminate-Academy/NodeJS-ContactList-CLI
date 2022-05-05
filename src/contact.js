@@ -49,7 +49,8 @@ class Contact {
                 // delete this.contact[i]
                 // this.contact.splice(this.contact[i], 1)
                 // break
-                console.log(this.contact[i])
+                // console.log(this.contact[i])
+                this.contact.shift(this.contact[i])
             }
         }
 
