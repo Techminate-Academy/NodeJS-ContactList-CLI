@@ -45,12 +45,17 @@ class Contact {
 
     delete(id){
         for (let i = 0; i < this.contact.length; i++) {
-            if(this.contact[i].id == id){
+            if(this.contact[i].id === id){
                 // delete this.contact[i]
-                this.contact.splice(3, 1)
-                break
+                // this.contact.splice(this.contact[i], 1)
+                // break
+                console.log(this.contact[i])
             }
         }
+
+        // this.contact = this.contact.filter(data => {
+        //     return data.id !== id
+        // })
     }
 
     last_inserted_contact(){
@@ -87,8 +92,9 @@ function contact_update(){
 
 function contact_delete(){
     var id = prompt("enter the id :");
+    let con_id = Number(id)
     // contact.get_by_id(id)
-    contact.delete(id)
+    contact.delete(con_id)
 }
 
 module.exports = {
