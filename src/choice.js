@@ -46,7 +46,7 @@ function choice_menu_main(){
             case '2':
                 choice_menu_contact()
                 menu_main = false
-                menu_welcome = false
+                
                 break;
             default:
                 menu_main = false
@@ -65,7 +65,7 @@ function choice_menu_contact(){
     
         switch(choice) {
             case '0':
-                menu_main = false
+                menu_welcome = true
                 menu_contact = false
                 break;
             case '1':
