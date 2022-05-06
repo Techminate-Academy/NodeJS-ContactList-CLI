@@ -1,4 +1,3 @@
-const prompt = require('prompt-sync')({sigint: true});
 
 const user = require('./src/user.js');
 const choices = require('./src/choice.js');

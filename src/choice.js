@@ -66,6 +66,7 @@ function choice_menu_contact(){
         switch(choice) {
             case '0':
                 menu_main = false
+                menu_contact = false
                 break;
             case '1':
                 contact.contact_create()
