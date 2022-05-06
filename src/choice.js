@@ -31,6 +31,7 @@ function choice_menu_welcome(admin){
         }
     }
 }
+
 function choice_menu_main(){
     while(menu_main){
         menu.menu_main()
@@ -46,7 +47,6 @@ function choice_menu_main(){
             case '2':
                 choice_menu_contact()
                 menu_main = false
-                
                 break;
             default:
                 menu_main = false
@@ -65,8 +65,8 @@ function choice_menu_contact(){
     
         switch(choice) {
             case '0':
-                menu_welcome = true
                 menu_contact = false
+                menu_main = true
                 break;
             case '1':
                 contact.contact_create()
@@ -80,8 +80,6 @@ function choice_menu_contact(){
             case '4':
                 contact.contact_delete()
                 break;
-            default:
-                menu_main = false
         }
     }
 }
